@@ -46,7 +46,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appbar_layout" />
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,27 +71,27 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:transitionName="img"
                     android:id="@+id/iv_destination"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:contentDescription="@string/image_destination"
-                    android:src="@drawable/baseline_android_24" />
+                    android:src="@drawable/baseline_android_24"
+                    android:transitionName="img" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:transitionName="name"
                 android:id="@+id/tv_name_destination"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_bold"
-                android:textAlignment="center"
                 android:text="@string/default_name"
-                android:textColor="#232323"
+                android:textAlignment="center"
                 android:textAllCaps="true"
+                android:textColor="#232323"
                 android:textSize="18sp"
+                android:transitionName="name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cv_image" />
@@ -103,26 +105,25 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_name_destination">
 
                 <TextView
-                    android:transitionName="rating"
                     android:id="@+id/tv_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:text="@string/default_rate"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:transitionName="rating" />
 
                 <ImageView
-                    android:transitionName="star"
                     android:id="@+id/iv_star"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_toEndOf="@id/tv_rating"
                     android:contentDescription="@string/star"
-                    android:src="@drawable/baseline_star_rate_24" />
+                    android:src="@drawable/baseline_star_rate_24"
+                    android:transitionName="star" />
 
                 <TextView
-                    android:transitionName="total_review"
                     android:id="@+id/amount_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -131,7 +132,8 @@
                     android:paddingTop="1dp"
                     android:text="@string/default_count_rate"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:transitionName="total_review" />
 
             </RelativeLayout>
 
@@ -165,7 +167,6 @@
                 app:layout_constraintTop_toBottomOf="@id/relative_layout_rating" />
 
 
-
             <TextView
                 android:id="@+id/tv_title_kota"
                 android:layout_width="wrap_content"
@@ -179,7 +180,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_title_jenis" />
 
             <TextView
-                android:transitionName="kota"
                 android:id="@+id/tv_content_kota"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -188,6 +188,7 @@
                 android:text="@string/default_jenis"
                 android:textColor="#000000"
                 android:textSize="12sp"
+                android:transitionName="kota"
                 app:layout_constraintStart_toEndOf="@id/tv_title_kota"
                 app:layout_constraintTop_toBottomOf="@id/tv_content_jenis" />
 
@@ -204,7 +205,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_title_kota" />
 
             <TextView
-                android:transitionName="distance"
                 android:id="@+id/tv_content_jarak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -213,6 +213,7 @@
                 android:text="@string/default_jenis"
                 android:textColor="#000000"
                 android:textSize="12sp"
+                android:transitionName="distance"
                 app:layout_constraintStart_toEndOf="@id/tv_title_jarak"
                 app:layout_constraintTop_toBottomOf="@id/tv_content_kota" />
 
@@ -251,27 +252,27 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_beri_ulasan"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/beri_ulasan"
         android:textStyle="bold"
         app:cornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_pergi"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_pergi"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/pergi"
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_beri_ulasan" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
