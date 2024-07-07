@@ -93,7 +93,7 @@ class RatingActivity : AppCompatActivity() {
                     }
 
                 }
-            } else showToast(this, "JANGAN KOSONG WOIII")
+            } else showToast(this, "Please fill in all required fields")
         }
     }
 
