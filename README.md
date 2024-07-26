@@ -1,1 +1,1 @@
-# mobile-development
+App is show about nearby destination by connect the API using retrofit. The auth is using the firebase and connect with the api too. Beside that the list destination can be save in favorite fragment using room. User Auth will be saved in datastore to remember the login.
